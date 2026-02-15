@@ -31,12 +31,13 @@ class _BookInfoState extends State<BookInfo> {
                 ],
               ),
               Container(
-                width: 240,
+                width: 140,
                 child: Image.network(widget.book_image)
               ),
-              Text(widget.book_name, style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
               SizedBox(height: 6,),
-              Text(widget.book_desc),
+              Text(widget.book_name, style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
+              SizedBox(height: 6,),
+              Text(widget.book_desc, style: TextStyle(fontSize: 18),),
 
             ],
           )
