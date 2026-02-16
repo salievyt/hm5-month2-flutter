@@ -1,7 +1,7 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'package:hm5month2/BookInfo.dart';
+import 'package:Books/BookInfo.dart';
 
 void main() {
   runApp(MaterialApp(home: const MainPage(), debugShowCheckedModeBanner: false,));
@@ -15,7 +15,13 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  final List<String> _books = ["Тень Великого Древа", "Как я попала замуж за светлого", "Забракованные", "Атомные привычки", "Маленький гриб."];
+  final List<String> _books = [
+    "Тень Великого Древа",
+    "Как я попала замуж за светлого",
+    "Забракованные",
+    "Атомные привычки",
+    "Маленький гриб."
+  ];
   final List<double> _reatings = [4.7, 4.8, 4.3, 5.0, 4.6];
   final List<String> _images = [
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgqmn-HnVBYe-50h7A0eisYFhno3755LRDXg&s",
@@ -24,7 +30,13 @@ class _MainPageState extends State<MainPage> {
     "https://flibusta.su/b/img/big/1030.jpg",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQstk-zPIwHo4ysJROIW-ZVYN32qL3EsF9yfg&s"
   ];
-  final List<String> _authors = [];
+  final List<String> _authors = [
+    "Роман Суржиков",
+    "Юлия Маслова",
+    "Татьяна Солодкова",
+    "Джеймс Клир",
+    "Ишисы Чжоу",
+  ];
   final List<String> _desc = [
     "Завершающая книга цикла Полари. Каждый получит свое: кто власть и бессмертие, кто кровавую жатву, кто свободу, кто месть. А сумрачная тень древней тайны все плотнее накрывает мир, и кому-то предстоит развеять ее. Любой ценой. Том 1 из 3.",
     "Споткнулась, упала, в другой мир пропала и теперь должна выйти замуж ради укрепления мира между империями. Какое платье, какой алтарь?! Я не некромантка, за которую вы меня принимаете! Или лучше сделать вид, что она? Отец невесты велит родить наследника и устранить мужа, темный император требует украсть разработки супруга, а светлый князь недобро на меня косится, принимая за злодейку. Похоже, придется им подыгрывать, пока не найду способ вернуться домой.",
@@ -52,7 +64,7 @@ class _MainPageState extends State<MainPage> {
                   ),
                   trailing: Icon(Icons.navigate_next),
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => BookInfo(book_name: _books[index], book_image: _images[index],book_desc: _desc[index])));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => BookInfo(book_name: _books[index], book_image: _images[index],book_desc: _desc[index], book_author: _authors[index])));
                   },
                 );
               }
