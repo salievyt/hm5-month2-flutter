@@ -54,7 +54,12 @@ class _MainPageState extends State<MainPage> {
           Expanded(child:
             ListView.separated(
               itemCount: _books.length,
-              separatorBuilder: (context,index) => Divider(),
+              separatorBuilder: (context,index) => Divider(
+                radius: BorderRadius.circular(14),
+                indent: 10,
+                endIndent: 10,
+                height: 2,
+              ),
               itemBuilder: (context,index){
                 return ListTile(
                   title: Text(_books[index]),
